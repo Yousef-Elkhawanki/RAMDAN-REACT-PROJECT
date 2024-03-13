@@ -10,4 +10,73 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+.todo--container {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
+  width: 40rem;
+  h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .form {
+    margin-top: 2rem;
+    input {
+      width: 100%;
+      outline: 0;
+      height: 5vh;
+      border: 2px solid rgba($color: #000000, $alpha: 0.3);
+      border-radius: 16px;
+      padding-inline-start: 1.5rem;
+    }
+    button {
+      background: #007f73;
+      height: 4.5vh;
+      width: fit-content;
+      padding-block: 0.5rem;
+      padding-inline: 1.5rem;
+      border: 0;
+      margin-top: 1.5rem;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+.todo--items {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 40rem;
+  .todo--item {
+    background: white;
+    width: calc((100% / 2) - 2rem);
+    padding: 1rem;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      width: fit-content;
+      border: 0;
+      background: red;
+      color: white;
+      padding-block: 1rem;
+      padding-inline: 1.5rem;
+      border-radius: 16px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+  }
 }
