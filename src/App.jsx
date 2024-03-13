@@ -1,14 +1,11 @@
-import React from "react";
-import Navbar from "./components/navbar/Navbar";
-import Banner from "./components/banner/Banner";
+import React from 'react'
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Banner />
-    </>
-  );
-};
+    <div>
+      <h1>RAMDAN KAREM ✨🌔🌙</h1>
+    </div>
+  )
+}
 
-export default App;
+export default App
