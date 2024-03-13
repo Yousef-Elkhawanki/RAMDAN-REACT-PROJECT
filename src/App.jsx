@@ -1,14 +1,7 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
-import Banner from "./components/banner/Banner";
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <Banner />
-    </>
-  );
+  return <div>App</div>;
 };
 
 export default App;
