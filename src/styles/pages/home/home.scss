@@ -1,0 +1,227 @@
+// start navbar
+html {
+  overflow-x: hidden;
+}
+nav {
+  position: absolute;
+  padding-inline: 2.5rem;
+  padding-block: 1.73rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // position: relative;
+  //   overflow: hidden;
+  width: 100%;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  .logo {
+    width: 6.75rem;
+    height: 3.049rem;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .menu {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        font-weight: 600;
+        letter-spacing: 1px;
+        &.active {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .btn {
+    button {
+      background-color: transparent;
+      color: $white;
+      padding: 0.5625rem 2.6875rem 0.625rem 2.6875rem;
+      width: fit-content;
+      text-transform: uppercase;
+      border-radius: 16px;
+      border: 2px solid $main-color;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::after {
+        transition: 0.4s ease-in-out;
+        content: "";
+        width: 0%;
+        height: 100%;
+        background: $main-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  .bar {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 2.56325rem;
+    cursor: pointer;
+    & > * {
+      transition: 0.4s ease-in-out;
+      width: 2.56325rem;
+      height: 3px;
+      background: $white;
+      border-radius: 16px;
+      &:nth-of-type(2) {
+        width: 1.25rem;
+      }
+    }
+    &:hover {
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+  .mobile-menu {
+    background: white;
+    position: absolute;
+    width: 25%;
+    height: fit-content;
+    right: -100%;
+    top: 4.5rem;
+    border-radius: 16px;
+    padding-block: 1.5rem;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      right: 1rem;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      line-height: 3;
+      height: 100%;
+      a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    height: 100%;
+  }
+  .banner-image {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    .banner--text {
+      text-align: center;
+      width: 31.875rem;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      color: $white;
+      padding-inline: 3.13rem;
+      h2 {
+        font-size: 2.5rem;
+        font-style: normal;
+        font-weight: 400;
+      }
+      p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+  }
+  .banner-thumbs {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.37rem;
+    position: absolute;
+    right: 3.13rem;
+    bottom: 1rem;
+    z-index: 10;
+    width: 35rem;
+    .swiper-slide-thumb-active {
+      .thumbs {
+        filter: grayscale(0);
+      }
+    }
+    .thumbs {
+      width: 10.5rem;
+      height: 15.6875rem;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      filter: grayscale(80);
+      cursor: pointer;
+      &.active {
+        filter: grayscale(0);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    padding-inline: 3.13rem;
+  }
+  .banner {
+    .banner-image {
+      .banner--text {
+        position: absolute;
+        top: 50%;
+        left: unset;
+        transform: translateY(-50%);
+        text-align: start;
+      }
+    }
+  }
+}
