@@ -12,7 +12,6 @@ const Card = ({ data }) => {
           <span>{data.price} EG</span>
           <div className="card--rate">
             <FaStar />
-
             <span>{data.rating.rate}</span>
           </div>
         </div>
