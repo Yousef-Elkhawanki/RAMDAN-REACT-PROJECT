@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 body {
     display: flex;
     align-items: center;
@@ -5,8 +6,39 @@ body {
     min-height: 100vh;
     color: white;
     background: #1d1d1d;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Lato", sans-serif;
+    text-align: center;
     h1{
-        font-size: 80px;
+        font-size: 6rem;
     }
+}
+:lang(ar){
+    font-family: "Cairo", sans-serif;
+}
+.lang_btn{
+
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.lang {
+    width: fit-content;
+    padding: 1rem 2rem;
+    background: transparent;
+    color: white;
+    border: 3px solid rgb(255, 255, 255 ,.2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 600;
+    &:hover{
+        background: white;
+        color: black;
+    }
+}
+
+.deactive{
+    display: none;
 }

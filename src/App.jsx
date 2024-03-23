@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import Palestine from "./component/Palestine/Palestine";
+import ChangeLang from "./component/changeLang/ChangeLang";
 
 const App = () => {
   return (
     <div>
-      <h1>RAMDAN KAREM ✨🌔🌙</h1>
+      <ChangeLang />
+      <Palestine />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
