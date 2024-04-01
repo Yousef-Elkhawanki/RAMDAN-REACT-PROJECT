@@ -1,6 +1,6 @@
 <h1>أهلا وسهلا بيكم </h1>
 <p>هنا هتلاقي كل الـ Source Code الخاص بكل التطبيقات اللي عملناها خلال الفتره دي</p>
-<strong>كل Repo ليه الـ Branch بتاعة تقدر تشوف كل Source Code لواحده</strong>
+<p>- كل Repo ليه الـ Branch بتاعة تقدر تشوف كل Source Code لواحده</p>
 <ul>
   <li>
     <a href="https://www.youtube.com/watch?v=susZNQwp2gQ&list=PLxRvAw0S16C4QdxQkcIuKTTPyHL-BwkzP">MARVEL AWESOME BANNER</a>
