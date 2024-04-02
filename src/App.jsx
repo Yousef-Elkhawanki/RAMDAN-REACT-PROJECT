@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
@@ -24,6 +24,7 @@ const App = () => {
       ],
     },
   ]);
+
   return (
     <Fragment>
       <MobileHandlerProvider>

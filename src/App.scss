@@ -1,0 +1,43 @@
+// scss import
+
+@import "./styles/global/variables";
+@import "./styles/components/navbar/navbar.scss";
+@import "./styles/components/mobileMenu/mobileMenu.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// global style
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Fiber";
+  src: url(./assets/fonts/fibre-font.otf);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./assets/images/darkBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+}
+h2,
+h3 {
+  font-family: "Fiber";
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+.container {
+  padding-inline: 0.62rem;
+  padding-block-start: 1.06rem;
+}
+
+@media (mix-width: 1024px) {
+  .container {
+    padding-inline: 1.62rem;
+    padding-block-start: 1.56rem;
+  }
+}
