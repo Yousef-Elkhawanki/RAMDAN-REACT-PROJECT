@@ -2,12 +2,13 @@
   position: absolute;
   z-index: 10;
   width: 100%;
+  left: 0;
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: calc(2.5rem + 0.62rem);
-    padding-block-start: calc(3.12rem + 1.06rem);
+    padding-inline: calc(0.63rem + 1.62rem);
+    padding-block-start: calc(0.88rem + 1.06rem);
     ul {
       display: none;
       align-items: center;

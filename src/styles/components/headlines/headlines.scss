@@ -1,0 +1,17 @@
+.headlines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4.06rem;
+  margin-bottom: 3.69rem;
+  p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}

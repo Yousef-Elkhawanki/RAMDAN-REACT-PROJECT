@@ -1,7 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  const date = new Date();
+  return (
+    <footer>
+      <span>
+        &copy;{`${date.getFullYear()}`}
+        <Link to={"https://www.youtube.com/channel/UCCxzov-Vf4YvDdnDrjsMtAw"}>Joe Programming .</Link>
+        All Reversed.
+      </span>
+    </footer>
+  );
 };
 
 export default Footer;

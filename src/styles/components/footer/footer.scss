@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+//   background: red;
+  height: 10vh;
+  span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    a {
+      display: inline-block;
+      margin-inline: 0.5rem;
+      color: $main-color;
+      font-weight: 600;
+    }
+  }
+}

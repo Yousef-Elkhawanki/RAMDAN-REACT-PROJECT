@@ -13,9 +13,7 @@ const Navbar = () => {
           <img src="./assets/images/logo.png" alt="logo" />
         </div>
         <ul>
-          <NavLink to={"/"} className={"active"}>
-            Home
-          </NavLink>
+          <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/about"}>About</NavLink>
           <NavLink to={"/shop"}>Shop</NavLink>
           <NavLink to={"/contact"}>Contact</NavLink>
