@@ -4,14 +4,14 @@ import Card from "../card/Card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
 import { MobileHandlerContext } from "../../utils/mobileHandler";
-const MostSelling = () => {
+const MostSelling = ({ productData }) => {
   const { isMobile } = useContext(MobileHandlerContext);
   return (
     <section className="mostSelling">
       <HeadLines subTitle={"Most Selling"} title={"Most Selling"} />
       <Swiper
-        slidesPerView={1.3}
-        spaceBetween={40}
+        slidesPerView={1.1}
+        spaceBetween={20}
         // loop={true}
         modules={[Navigation, Scrollbar]}
         navigation={{ nextEl: ".right-arrow", prevEl: ".left-arrow" }}
@@ -20,42 +20,29 @@ const MostSelling = () => {
         }}
         breakpoints={{
           600: {
-            slidesPerView: 2.3,
+            slidesPerView: 2.1,
           },
           800: {
+            slidesPerView: 3.1,
+          },
+          1024: {
+            slidesPerView: 2.5,
+          },
+          1250: {
             slidesPerView: 3.3,
           },
           1440: {
             slidesPerView: 4.3,
           },
-          1600: {
-            slidesPerView: 5.3,
-          },
         }}>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Card />
-        </SwiperSlide>
+        {productData?.data?.map(
+          (data, _id) =>
+            data?.attributes?.most_selling && (
+              <SwiperSlide key={_id}>
+                <Card productData={data?.attributes} />
+              </SwiperSlide>
+            ),
+        )}
       </Swiper>
       <div className="swiper--option">
         <div className="swiper--progress"></div>

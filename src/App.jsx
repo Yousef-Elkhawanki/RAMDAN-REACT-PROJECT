@@ -1,15 +1,20 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useEffect } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Shop from "./pages/shop/Shop";
 import Contact from "./pages/contact/Contact";
-import WhishList from "./pages/whishList/WhishList";
 import Cart from "./pages/cart/Cart";
 import { MobileHandlerProvider } from "./utils/mobileHandler";
+import WishList from "./pages/wishList/WishList";
+import Error from "./pages/error/Error";
+import ProductDetails from "./pages/productDetails/ProductDetails";
+import { useSelector } from "react-redux";
+import LoadingPage from "./components/loader/LoadingPage";
 
 const App = () => {
+  const { isLoading } = useSelector((state) => state.products);
   const Routing = createBrowserRouter([
     {
       path: "/",
@@ -17,10 +22,15 @@ const App = () => {
       children: [
         { index: true, element: <Home /> },
         { path: "/about", element: <About /> },
-        { path: "/shop", element: <Shop /> },
+        {
+          path: "/shop",
+          element: <Shop />,
+        },
+        { path: "/shop/:slug", element: <ProductDetails /> },
         { path: "/contact", element: <Contact /> },
-        { path: "/whishList", element: <WhishList /> },
+        { path: "/wishList", element: <WishList /> },
         { path: "/cart", element: <Cart /> },
+        { path: "*", element: <Error /> },
       ],
     },
   ]);

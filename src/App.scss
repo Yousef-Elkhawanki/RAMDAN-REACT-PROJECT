@@ -10,6 +10,14 @@
 @import "./styles/components/card/card.scss";
 @import "./styles/components/footer/footer.scss";
 @import "./styles/components/video/video.scss";
+@import "./styles/components/breadCrumb/breadCrumb.scss";
+@import "./styles/components/empty/empty.scss";
+@import "./styles/components/loadingPage/loadingPage.scss";
+@import "./styles/pages/shop/shop.scss";
+@import "./styles/pages/cart/cart.scss";
+@import "./styles/pages/notFound/notFound.scss";
+@import "./styles/pages/productDetails/ProductDetails.scss";
+@import "./styles/pages/about/about.scss";
 // global style
 * {
   padding: 0;
@@ -22,7 +30,7 @@
 }
 html,
 body {
-  font-size: 10px;
+  font-size: 12px;
   overflow-x: hidden;
 }
 body {
@@ -30,7 +38,10 @@ body {
   background: url(./assets/images/darkBg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: $white;
+  min-height: 100vh;
+  width: 100%;
 }
 h2,
 h3 {

@@ -1,0 +1,183 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(src/assets/images/darkBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $white;
+  min-height: 100vh;
+  width: 100%;
+}
+.productDetails {
+  .productDetails--container {
+    min-height: 50vh;
+    border-radius: 1rem;
+    background: #1d1d1d;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 4.54rem;
+    flex-wrap: wrap;
+    .productDetails--image {
+      position: relative;
+      border-radius: 1rem;
+      width: 100%;
+      height: 24.5625rem;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2e2e2e;
+      img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+      }
+      .whishList {
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+        background: $white;
+        position: absolute;
+        left: 2rem;
+        top: 1.69rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        border: 3px solid rgba(214, 40, 40, 0.5);
+        svg {
+          stroke: $main-color;
+          width: 2rem;
+          path {
+            fill: $main-color;
+          }
+        }
+        svg,
+        path {
+          transition: 0.4s ease-in-out;
+        }
+        &:hover {
+          background: $main-color;
+          path {
+            fill: $white;
+            transition: 0.4s ease-in-out;
+          }
+        }
+        &.active {
+          background: $main-color;
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+    .productDetails--content {
+      flex: 1;
+      h4 {
+        font-size: 2.25rem;
+        font-weight: 400;
+        margin-bottom: 0.94rem;
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+      }
+      span {
+        color: $main-color;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .card--btn {
+        width: 100%;
+        margin-top: 2.44rem;
+        button {
+          cursor: pointer;
+          width: 100%;
+          border-radius: 0.875rem;
+          border: 3px solid rgba(255, 255, 255, 0.5);
+          padding: 0.8125rem 0.81rem;
+          font-size: 1rem;
+          font-weight: 400;
+          background: transparent;
+          color: $white;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          &::after {
+            transition: 0.4s ease-in-out;
+            content: "";
+            width: 0%;
+            height: 100%;
+            background: $main-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .productDetails {
+    .productDetails--container {
+      .productDetails--image {
+        border-radius: 1rem;
+        width: 31.08744rem;
+        height: 24.5625rem;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #2e2e2e;
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+        }
+      }
+      .productDetails--content {
+        .card--btn {
+          width: 20.54419rem;
+          margin-top: 2.44rem;
+          button {
+            cursor: pointer;
+            width: 100%;
+            border-radius: 0.875rem;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            padding: 0.8125rem 0.81rem;
+            font-size: 1rem;
+            font-weight: 400;
+            background: transparent;
+            color: $white;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            &::after {
+              transition: 0.4s ease-in-out;
+              content: "";
+              width: 0%;
+              height: 100%;
+              background: $main-color;
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: -1;
+            }
+            &:hover::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

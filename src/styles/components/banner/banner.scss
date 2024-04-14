@@ -48,7 +48,22 @@
 @media (min-width: 1024px) {
   .hero-banner {
     .hero--content {
-      width: 70%;
+      width: 100%;
+      .content {
+        h2 {
+          font-size: 6rem;
+        }
+        p {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1250px) {
+  .hero-banner {
+    .hero--content {
+      width: 80%;
       .content {
         h2 {
           font-size: 6rem;

@@ -10,7 +10,7 @@ const Banner = () => {
           <p>Reservation is a step into a world of gastronomic wonder. Reserve your table today and let us paint your culinary dreams into reality.</p>
         </div>
         <div className="btn">
-          <Link to={""}>Explore Products</Link>
+          <Link to={"/shop"}>Explore Products</Link>
         </div>
       </div>
     </section>

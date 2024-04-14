@@ -9,7 +9,7 @@ const Layout = () => {
     <Fragment>
       <MobileMenu />
       <Navbar />
-      <Outlet />
+      <Outlet></Outlet>
       <Footer />
     </Fragment>
   );

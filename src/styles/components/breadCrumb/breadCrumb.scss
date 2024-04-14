@@ -1,0 +1,25 @@
+.breadCrumb {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url(./assets/images/Hero-Banner.jpg);
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .breadCrumb--text {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    gap: 0.5rem;
+    .page {
+      opacity: 0.5;
+    }
+    a {
+      opacity: 1;
+      color: $white !important;
+    }
+  }
+}

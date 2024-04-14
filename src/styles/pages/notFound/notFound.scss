@@ -1,0 +1,26 @@
+.error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-block-start: 4rem;
+  padding-inline: 1rem;
+  .notFound {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .error {
+    .notFound {
+      width: 50%;
+    }
+  }
+}

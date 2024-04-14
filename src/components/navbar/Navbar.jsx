@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MobileHandlerContext } from "../../utils/mobileHandler";
@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img src="./assets/images/logo.png" alt="logo" />
+          <img src="/src/assets/images/logo.png" alt="logo" />
         </div>
         <ul>
           <NavLink to={"/"}>Home</NavLink>
@@ -19,14 +19,14 @@ const Navbar = () => {
           <NavLink to={"/contact"}>Contact</NavLink>
         </ul>
         <div className="nav--icons">
-          <div className="nav--icon">
+          <Link to={"/wishList"} className="nav--icon">
             <span>0</span>
             <FaHeart />
-          </div>
-          <div className="nav--icon">
+          </Link>
+          <Link to={"/cart"} className="nav--icon">
             <span>0</span>
             <AiOutlineShoppingCart />
-          </div>
+          </Link>
         </div>
         {/* menu-open */}
         {isMobile && (

@@ -1,0 +1,105 @@
+.shop {
+  .filter--category {
+    display: flex;
+  }
+  .swiper {
+    margin-top: 8.44rem;
+    margin-bottom: 6.06rem;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    width: 100%;
+    // width: fit-content !important;
+    .swiper-slide {
+      width: fit-content !important;
+    }
+  }
+  .filterCategory--container {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .filter--image {
+      width: 10.5rem;
+      height: 10.5rem;
+      //   background: red;
+      border: 4px solid $white;
+      border-radius: 50%;
+      //   overflow: hidden;
+      padding: 0.5rem;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    &.active {
+      .filter--image {
+        border-color: $main-color;
+        position: relative;
+        &::after {
+          content: "\2713";
+          width: 3.125rem;
+          height: 3.125rem;
+          border-radius: 50%;
+          background: $main-color;
+          position: absolute;
+          right: -0.5rem;
+          top: -0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+        }
+      }
+    }
+    span {
+      margin-top: 2.38rem;
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  .shop--items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    .card {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .shop {
+    .filterCategory--container {
+      //   padding-inline: 12.37rem;
+    }
+    .shop--items {
+      justify-content: flex-start;
+      .card {
+        width: calc(100% / 2 - 2.5rem);
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .shop {
+    .filterCategory--container {
+      width: 80%;
+      margin: auto;
+    }
+    .shop--items {
+      padding-inline: 3rem;
+      .card {
+        width: calc(100% / 3 - 2.5rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "most_selling": {
+      "type": "boolean",
+      "default": false
+    },
+    "price": {
+      "type": "string"
+    },
+    "pieces": {
+      "type": "integer"
+    },
+    "price_formatting": {
+      "type": "string",
+      "default": "EG"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Normal Sauce",
+        "Spicy Sauce"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feature": {
+      "type": "boolean",
+      "default": false
+    },
+    "rate": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    },
+    "wish_lists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::wish-list.wish-list",
+      "mappedBy": "products"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

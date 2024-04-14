@@ -1,0 +1,70 @@
+.about {
+  .about--content {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    .about--image,
+    .about--text {
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 100%;
+      text-align: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+        transition: 0.4s ease-in-out;
+      }
+    }
+    .about--image {
+      height: 50vh;
+      box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.2, 1.2) rotate(2deg);
+      }
+    }
+    .about--text {
+      h3 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+    &:nth-of-type(odd) {
+      .about--image {
+        order: 0;
+      }
+      .about--text {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    .about--content {
+      .about--image,
+      .about--text {
+        width: 40%;
+        text-align: start;
+      }
+      &:nth-of-type(odd) {
+        .about--image {
+          order: 1;
+        }
+        .about--text {
+          text-align: end;
+        }
+      }
+    }
+  }
+}
