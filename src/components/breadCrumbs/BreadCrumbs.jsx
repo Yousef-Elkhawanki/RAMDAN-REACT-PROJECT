@@ -7,15 +7,13 @@ const BreadCrumbs = () => {
     <section className="breadCrumb">
       <div className="breadCrumb--text">
         <Link to={"/"}>Home</Link>
-        <span className="page">
-          {pathname.split("/")[2] !== undefined ? (
-            <>
-              - <Link to={`/${pathname.split("/")[1]}`}>{pathname.split("/")[1]}</Link> - {pathname.split("/")[2].replaceAll("-", " ")}
-            </>
-          ) : (
-            pathname.replaceAll("/", "-")
-          )}
-        </span>
+        {pathname.split("/")[2] !== undefined ? (
+          <span className="page">
+            - <Link to={`/${pathname.split("/")[1]}`}>{pathname.split("/")[1]}</Link> - {pathname.split("/")[2].replaceAll("-", " ")}
+          </span>
+        ) : (
+          pathname.replaceAll("/", "-")
+        )}
       </div>
     </section>
   );

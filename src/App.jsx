@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/home/Home";
@@ -14,7 +14,7 @@ import { useSelector } from "react-redux";
 import LoadingPage from "./components/loader/LoadingPage";
 
 const App = () => {
-  const { isLoading } = useSelector((state) => state.products);
+  const [isLoading, setIsLoading] = useState(false);
   const Routing = createBrowserRouter([
     {
       path: "/",
@@ -34,12 +34,15 @@ const App = () => {
       ],
     },
   ]);
-
+  useEffect(() => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
   return (
     <Fragment>
-      <MobileHandlerProvider>
-        <RouterProvider router={Routing} />
-      </MobileHandlerProvider>
+      <MobileHandlerProvider>{isLoading ? <LoadingPage /> : <RouterProvider router={Routing} />}</MobileHandlerProvider>
     </Fragment>
   );
 };
