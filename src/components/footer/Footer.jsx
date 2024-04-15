@@ -7,7 +7,9 @@ const Footer = () => {
     <footer>
       <span>
         &copy;{`${date.getFullYear()}`}
-        <Link to={"https://www.youtube.com/channel/UCCxzov-Vf4YvDdnDrjsMtAw"}>Joe Programming .</Link>
+        <Link target="_blank" to={"https://www.youtube.com/channel/UCCxzov-Vf4YvDdnDrjsMtAw"}>
+          Joe Programming .
+        </Link>
         All Reversed.
       </span>
     </footer>

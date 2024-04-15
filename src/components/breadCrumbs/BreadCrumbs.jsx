@@ -12,7 +12,7 @@ const BreadCrumbs = () => {
             - <Link to={`/${pathname.split("/")[1]}`}>{pathname.split("/")[1]}</Link> - {pathname.split("/")[2].replaceAll("-", " ")}
           </span>
         ) : (
-          pathname.replaceAll("/", "-")
+          <span>{pathname.replaceAll("/", "-")}</span>
         )}
       </div>
     </section>

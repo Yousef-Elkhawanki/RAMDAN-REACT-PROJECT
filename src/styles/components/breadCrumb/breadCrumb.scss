@@ -16,8 +16,14 @@
     text-transform: uppercase;
     // display: flex;
     // gap: 0.5rem;
-    .page {
+
+    & > *:not(a) {
       opacity: 0.5;
+    }
+    .page {
+      & > a {
+        opacity: 1;
+      }
     }
     a {
       opacity: 1;
